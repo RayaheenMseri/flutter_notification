@@ -9,6 +9,7 @@ class ReminderDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Reminder Details")),
+      backgroundColor: Colors.white,
       body: Center(
         child: Text(payload ?? "No data", style: const TextStyle(fontSize: 24)),
       ),

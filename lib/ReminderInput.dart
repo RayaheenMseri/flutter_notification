@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'notification_service.dart';
 
 class ReminderInputPage extends StatefulWidget {
@@ -16,14 +15,15 @@ class _ReminderInputPageState extends State<ReminderInputPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Add Reminder")),
+      appBar: AppBar(title: const Text("Set Reminder")),
+      backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
             TextField(
               controller: _titleController,
-              decoration: const InputDecoration(labelText: "Reminder Title"),
+              decoration: const InputDecoration(labelText: "Title"),
             ),
             const SizedBox(height: 16),
             ElevatedButton(
@@ -49,8 +49,6 @@ class _ReminderInputPageState extends State<ReminderInputPage> {
             const Spacer(),
             ElevatedButton(
               onPressed: () async {
-                if (_titleController.text.isEmpty || _selectedTime == null) return;
-
                 final now = DateTime.now();
                 final selectedDateTime = DateTime(
                   now.year,
@@ -76,7 +74,7 @@ class _ReminderInputPageState extends State<ReminderInputPage> {
                 _titleController.clear();
                 setState(() => _selectedTime = null);
               },
-              child: const Text("Save Reminder"),
+              child: const Text("Set Reminder"),
             ),
           ],
         ),

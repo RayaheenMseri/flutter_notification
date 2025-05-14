@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notification/ReminderInput.dart';
 import 'DetailsPage.dart';
-import 'home.dart';
 import 'notification_service.dart';
 import 'package:timezone/data/latest.dart' as tz;
-import 'package:timezone/timezone.dart' as tz;
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
