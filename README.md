@@ -9,7 +9,7 @@ A simple app to schedule reminders with notifications.
 * Schedule local notifications
 * Tap on notification to navigate to a detail screen showing reminder title
 
-## 📷 Screens Overview
+## Screens Overview
 
 1. **Reminder Input Page**
 
